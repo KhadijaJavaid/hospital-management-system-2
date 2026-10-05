@@ -24,3 +24,29 @@ patientForm.addEventListener("submit", function (event) {
 
     patientForm.reset();
 });
+const doctorForm = document.getElementById("doctorForm");
+const doctorMessage = document.getElementById("doctorMessage");
+
+doctorForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const doctorName = document.getElementById("doctorName").value;
+    const doctorSpecialization =
+        document.getElementById("doctorSpecialization").value;
+    const doctorContact =
+        document.getElementById("doctorContact").value;
+
+    if (
+        doctorName === "" ||
+        doctorSpecialization === "" ||
+        doctorContact === ""
+    ) {
+        doctorMessage.textContent = "Please fill in all doctor fields.";
+        return;
+    }
+
+    doctorMessage.textContent =
+        "Doctor added successfully!";
+
+    doctorForm.reset();
+});
