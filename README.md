@@ -49,3 +49,19 @@ Feature Branch
 → Fix Comments
 → Approval
 → Merge into main
+
+## Definition of Done
+
+A feature is considered complete when:
+
+- The feature is implemented according to the issue.
+- The code follows the team coding standards.
+- The feature is tested.
+- Changes are committed to a feature branch.
+- The feature branch is pushed to GitHub.
+- A Pull Request is created.
+- The other team member reviews the Pull Request.
+- Review comments are resolved.
+- The Pull Request is approved.
+- The Pull Request is merged into main.
+- The merged feature is verified.
