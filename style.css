@@ -70,3 +70,7 @@ td {
 th {
     background-color: #e6e6e6;
 }
+#appointmentMessage {
+    text-align: center;
+    margin-top: 15px;
+}
