@@ -58,3 +58,47 @@ doctorForm.addEventListener("submit", function (event) {
 
     doctorForm.reset();
 });
+const appointmentForm = document.getElementById("appointmentForm");
+const appointmentMessage = document.getElementById("appointmentMessage");
+
+appointmentForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const patientName =
+        document.getElementById("appointmentPatient").value;
+
+    const doctorName =
+        document.getElementById("appointmentDoctor").value;
+
+    const appointmentDate =
+        document.getElementById("appointmentDate").value;
+
+    const appointmentTime =
+        document.getElementById("appointmentTime").value;
+
+    if (
+        patientName === "" ||
+        doctorName === "" ||
+        appointmentDate === "" ||
+        appointmentTime === ""
+    ) {
+        appointmentMessage.textContent =
+            "Please fill in all appointment fields.";
+        return;
+    }
+
+    const tableBody =
+        document.getElementById("appointmentTableBody");
+
+    const newRow = tableBody.insertRow();
+
+    newRow.insertCell(0).textContent = patientName;
+    newRow.insertCell(1).textContent = doctorName;
+    newRow.insertCell(2).textContent = appointmentDate;
+    newRow.insertCell(3).textContent = appointmentTime;
+
+    appointmentMessage.textContent =
+        "Appointment added successfully!";
+
+    appointmentForm.reset();
+});
