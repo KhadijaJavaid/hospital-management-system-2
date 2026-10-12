@@ -19,10 +19,18 @@ patientForm.addEventListener("submit", function (event) {
         return;
     }
 
-    registrationMessage.textContent =
-        "Patient registered successfully!";
+   registrationMessage.textContent =
+    "Patient registered successfully!";
 
-    patientForm.reset();
+const tableBody = document.getElementById("patientTableBody");
+const newRow = tableBody.insertRow();
+
+newRow.insertCell(0).textContent = patientName;
+newRow.insertCell(1).textContent = patientAge;
+newRow.insertCell(2).textContent = patientGender;
+newRow.insertCell(3).textContent = patientContact;
+
+patientForm.reset();
 });
 const doctorForm = document.getElementById("doctorForm");
 const doctorMessage = document.getElementById("doctorMessage");
